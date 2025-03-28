@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Tarjetas de Regalo Amazon</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; margin-top: 50px; }
+        #codigo { display: none; font-size: 20px; font-weight: bold; margin: 20px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        img { width: 200px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Generador de Tarjetas de Regalo Amazon</h2>
+    <img src="image.png" alt="Tarjeta de regalo Amazon">
+    <br>
+    <button onclick="generarCodigo()">Generar Código</button>
+    <p id="codigo">XXXX-XXXX-XXXX-XXXX</p>
+    <button id="confirmar" style="display:none;" onclick="confirmarCodigo()">Confirmar recepción</button>
+
+    <script>
+        function generarCodigo() {
+            document.getElementById('codigo').textContent = '****-****-****-****';
+            document.getElementById('codigo').style.display = 'block';
+            document.getElementById('confirmar').style.display = 'inline-block';
+        }
+
+        function confirmarCodigo() {
+            window.location.href = "https://xyz.com";
+        }
+    </script>
+</body>
+</html>
+
+
